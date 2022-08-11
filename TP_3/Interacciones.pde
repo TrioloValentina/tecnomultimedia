@@ -1,10 +1,10 @@
-void inicio(){
+void inicio(String texto){
   textFont(pixel);
   fill(255);
-  text(" PRESIONA 'SPACE'\n PARA CONTINUAR",190,350);
+  text(texto,190,350);
 }
 
-void instrucciones(){
+void instrucciones(String texto){
   if(dist(mouseX, mouseY,300,320) <= 40){
      strokeWeight(5);
      stroke (255,0,0);
@@ -65,28 +65,28 @@ void jugando(){
   return distan < tam2[0];
   
 }
-void perdiste(){
+void perdiste(String texto, String texto2){
     fill(255);
     textFont(pixel);
-    text("PRESIONA 'ENTER'\n PARA REINICIAR",195,350);
+    text(texto,195,350);
     textSize(50);
-    text("PERDISTE", width/3.2, height/2);
+    text(texto2, width/3.2, height/2);
 }
 
-void ganaste(){
+void ganaste(String texto){
     textFont(pixel);
     textSize(50);
     fill(255);
-    text("GANASTE", width/3.2, height/2);
+    text(texto, width/3.2, height/2);
     if (keyCode == RIGHT){
       estado = "CREDITOS";
     }
 }
 
-void creditos(){
+void creditos(String texto){
     textFont(pixel);
     textSize(20);
-    text(texto2,width/4, height/4);
+    text(texto,width/4, height/4);
 }
 
 void reiniciar(){
