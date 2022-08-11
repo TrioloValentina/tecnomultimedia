@@ -12,7 +12,7 @@ float [] tam2 = new float[cant];
 float [] dir = new float[cant];
 float [][] pos = new float[cant][2];
 boolean disparo;
-String estado, texto, texto2;
+String estado;
 
 void setup(){
   size(600,500);
@@ -25,9 +25,7 @@ void setup(){
   asteroide = loadImage ("asteroide.png");
   
   estado = "INICIO";
-  texto = "   ¡DERRIBA LOS ASTEROIDES!\n\n    DISPARA HACIENDO CLICK\n\n  ¡HAZLO EN EL MENOR TIEMPO!";
-  texto2 = "TECNO MULTIMEDIAL\n\n ALUMNAS\n\n PONZ RUIZ CLARA, TRIOLO VALENTINA\n\n PROFESOR\n\n MATIAS JAUREGUI LORDA\n\n ¡GRACIAS POR JUGAR!";
-  
+   
   tiempo = 0;
   contador = 0;
   posX = 0;
@@ -51,13 +49,13 @@ void draw(){
     if(estado.equals("INICIO")){
     background(0);
     image(galaga,0,0,620,500);
-    inicio();
+    inicio(" PRESIONA 'SPACE'\n PARA CONTINUAR");
     
   }else if( estado.equals("INSTRUCCIONES") ){
     background(0);
     image(instrucciones,0,0,620,500); 
     fill(0);
-    instrucciones();
+    instrucciones("   ¡DERRIBA LOS ASTEROIDES!\n\n    DISPARA HACIENDO CLICK\n\n  ¡HAZLO EN EL MENOR TIEMPO!");
     
   }else if(estado.equals("JUGANDO")){
     background(0);
@@ -73,17 +71,17 @@ void draw(){
   }else if( estado.equals("PERDISTE") ){
     background(0); 
     image(instrucciones,0,0,620,500);   
-    perdiste();
+    perdiste("PRESIONA 'ENTER'\n PARA REINICIAR", "PERDISTE");
     
   }else if( estado.equals("GANASTE") ){
     background(0);
     image(instrucciones,0,0,620,500);   
-    ganaste();
+    ganaste("GANASTE");
   }
    if( estado.equals("CREDITOS") ){
     background(0);
     image(instrucciones,0,0,620,500); 
-    creditos(); 
+    creditos("TECNO MULTIMEDIAL\n\n ALUMNAS\n\n PONZ RUIZ CLARA, TRIOLO VALENTINA\n\n PROFESOR\n\n MATIAS JAUREGUI LORDA\n\n ¡GRACIAS POR JUGAR!"); 
     }
 }
 
