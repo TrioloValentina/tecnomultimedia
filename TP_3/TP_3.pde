@@ -1,5 +1,5 @@
 /*TP 3 juego interactivo libre
-video TRIOLO VALENTINA 91420/9 https://youtu.be/WMdxtmnOwfo
+video TRIOLO VALENTINA 91420/9 https://www.youtube.com/watch?v=NLHi2Xz738g&ab_channel=valentriolo
 video PONZ RUIZ CLARA 91472/1 https://youtu.be/djiBpAg6PSU
 */
 int cant = 6;
