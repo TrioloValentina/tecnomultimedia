@@ -1,0 +1,6 @@
+/*class Personaje{
+  
+  void dibujar(){
+  }
+  
+}*/
